@@ -22,7 +22,7 @@ const allFiles = ["01_master.js",
 
 parent.api_call("list_codes", {
   callback: function () {
-    game_log("Updating from GitHub/D4ddy-LiLd4rk...");
+    game_log("Updating from GitHub/Torusblue129...");
     for (let file of allFiles) {
       let request = new XMLHttpRequest();
       request.open("GET", baseURL + file);
