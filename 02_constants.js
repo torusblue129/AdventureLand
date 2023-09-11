@@ -1,6 +1,6 @@
 /*	
- * @author	D4ddy-LiLd4rk
- * @source	https://github.com/D4ddy-LiLd4rk/AdventureLand
+ * @original by	D4ddy-LiLd4rk, modified by TorusBlue129
+ * @source	https://github.com/torusblue129/AdventureLand
  */
 
 const colorGreen = "#1ED97C";
@@ -12,9 +12,9 @@ const colorNavy = "#1C222B";
 var Characters;
 (function (Characters) {
   Characters["Warrior"] = "D4ddy001";
-  Characters["Mage"] = "D4ddy002";
-  Characters["Ranger"] = "D4ddy003";
-  Characters["Merchant"] = "D4ddy004";
+  Characters["Mage"] = "CodeMage";
+  Characters["Ranger"] = "CodeRanger";
+  Characters["Merchant"] = "CodeMerchant";
 })(Characters || (Characters = {}));
 
 var CharacterTypes;
@@ -134,7 +134,8 @@ var MageSkills;
   };
   MageSkills["ControlledManaBurst"] = {
     name: "cburst",
-    cd: 6000,
+    mp: 80,
+    cd: 2400,
     level: 75
   };
   MageSkills["Energize"] = {
@@ -150,6 +151,13 @@ var MageSkills;
   MageSkills["Magiport"] = {
     name: "magiport",
     mp: 900
+  };
+  MageSkills["ReflectiveShield"] = {
+    name: "reflection",
+    mp: 540,
+    cd: 300000,
+    range: 320,
+    level: 60
   };
 })(MageSkills || (MageSkills = {}));
 
@@ -179,23 +187,42 @@ var Merchantkills;
 
 var PriestSkills;
 (function (PriestSkills) {
-  PriestSkills["Blink"] = {
-    name: "blink"
+  PriestSkills["AbsorbSins"] = {
+    name: "absorb",
+    mp: 200,
+    cd: 400,
+    level: 55
   };
-  PriestSkills["ManaBurst"] = {
-    name: "burst"
+  PriestSkills["Curse"] = {
+    name: "curse",
+    mp: 400,
+    cd: 5000
   };
-  PriestSkills["ControlledManaBurst"] = {
-    name: "cburst"
+  PriestSkills["DarkBlessing"] = {
+    name: "darkblessing",
+    mp: 900,
+    cd: 600000,
+    range: 600,
+    level: 70
   };
-  PriestSkills["Energize"] = {
-    name: "energize"
+  PriestSkills["Heal"] = {
+    name: "heal"
   };
-  PriestSkills["Light"] = {
-    name: "light"
+  PriestSkills["PartyHeal"] = {
+    name: "partyheal",
+    mp: 400,
+    cd: 200
   };
-  PriestSkills["Magiport"] = {
-    name: "magiport"
+  PriestSkills["PhaseOut"] = {
+    name: "phaseout",
+    mp: 200,
+    cd: 4000,
+    level: 64
+  };
+  PriestSkills["Revival"] = {
+    mp: 500,
+    cd: 200,
+    range: 240
   };
 })(PriestSkills || (PriestSkills = {}));
 
