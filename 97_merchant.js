@@ -16,9 +16,9 @@ let oldLocation = {};
 let isPartyLeader = false;
 
 let potions = {
-  D4ddy001: { name: "D4ddy001", inventory: { hpot0: { q: -1 }, hpot1: { q: -1 }, mpot0: { q: -1 }, mpot1: { q: -1 } } },
-  D4ddy002: { name: "D4ddy002", inventory: { hpot0: { q: -1 }, hpot1: { q: -1 }, mpot0: { q: -1 }, mpot1: { q: -1 } } },
-  D4ddy003: { name: "D4ddy003", inventory: { hpot0: { q: -1 }, hpot1: { q: -1 }, mpot0: { q: -1 }, mpot1: { q: -1 } } }
+  CodeWarrior: { name: "CodeWarrior", inventory: { hpot0: { q: -1 }, hpot1: { q: -1 }, mpot0: { q: -1 }, mpot1: { q: -1 } } },
+  CodeMage: { name: "CodeMage", inventory: { hpot0: { q: -1 }, hpot1: { q: -1 }, mpot0: { q: -1 }, mpot1: { q: -1 } } },
+  CodeRanger: { name: "CodeRanger", inventory: { hpot0: { q: -1 }, hpot1: { q: -1 }, mpot0: { q: -1 }, mpot1: { q: -1 } } }
 };
 
 function init() {
@@ -80,9 +80,9 @@ function withdrawMoney() {
 
 function needPotions() {
   return (quantity("hpot0") < 600
-    || quantity("hpot1") < 600
+    /*|| quantity("hpot1") < 600*/
     || quantity("mpot0") < 600
-    || quantity("mpot1") < 600);
+    /*|| quantity("mpot1") < 600*/);
 }
 
 function buyPotions() {
@@ -92,9 +92,9 @@ function buyPotions() {
   let quantityBigMP = quantity("mpot1");
 
   if (quantitySmallHP - 600 < 0) buy("hpot0", getDifference(quantitySmallHP, 600));
-  if (quantityBigHP - 600 < 0) buy("hpot1", getDifference(quantityBigHP, 600));
+  /*if (quantityBigHP - 600 < 0) buy("hpot1", getDifference(quantityBigHP, 600));*/
   if (quantitySmallMP - 600 < 0) buy("mpot0", getDifference(quantitySmallMP, 600));
-  if (quantityBigMP - 600 < 0) buy("mpot1", getDifference(quantityBigMP, 600));
+  /*if (quantityBigMP - 600 < 0) buy("mpot1", getDifference(quantityBigMP, 600));*/
 }
 
 function deliverPotions() {

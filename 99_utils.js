@@ -35,7 +35,7 @@ function partyHandler() {
   if (parent.isPartyLeader) {
     createParty();
   } else {
-    if (character.party && character.party !== "D4ddy001") leaveParty();
+    if (character.party && character.party !== "CodeWarrior") leaveParty();
   }
 }
 
@@ -43,17 +43,17 @@ function createParty() {
     let party = [Characters.Warrior, Characters.Mage, Characters.Ranger, Characters.Merchant];
 
     for (let index in party) {
-      if (party[index] === "D4ddy001") continue;
+      if (party[index] === "CodeWarrior") continue;
       if (!parent.party[party[index]]) send_party_invite(party[index]);
     }
 }
 
 function on_party_invite(name) {
-  if (!character.party && "D4ddy001" === name) accept_party_invite(name);
+  if (!character.party && "CodeWarrior" === name) accept_party_invite(name);
 }
 
 function on_party_request(name) {
-  if (!character.party && "D4ddy001" === name) accept_party_request(name);
+  if (!character.party && "CodeWarrior" === name) accept_party_request(name);
 }
 
 function leaveParty() {

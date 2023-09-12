@@ -11,7 +11,7 @@ const colorNavy = "#1C222B";
 
 var Characters;
 (function (Characters) {
-  Characters["Warrior"] = "D4ddy001";
+  Characters["Warrior"] = "CodeWarrior";
   Characters["Mage"] = "CodeMage";
   Characters["Ranger"] = "CodeRanger";
   Characters["Merchant"] = "CodeMerchant";
