@@ -139,7 +139,7 @@ function canUseTaunt() {
 }
 
 add_bottom_button(1, 'Update Code', function () {
-  const baseURL = "https://raw.githubusercontent.com/D4ddy-LiLd4rk/AdventureLand/master/";
+  const baseURL = "https://raw.githubusercontent.com/torusblue129/AdventureLand/master/";
 
   const allFiles = ["01_master.js",
     "02_constants.js",
@@ -158,7 +158,7 @@ add_bottom_button(1, 'Update Code', function () {
 
   parent.api_call("list_codes", {
     callback: function () {
-      game_log("Updating from GitHub/D4ddy-LiLd4rk...");
+      game_log("Updating from GitHub/TorusBlue129...");
       for (let file of allFiles) {
         let request = new XMLHttpRequest();
         request.open("GET", baseURL + file);
