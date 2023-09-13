@@ -10,6 +10,10 @@ let isPartyLeader = false;
 
 let monsterType = ""; //should be set ingame
 
+//var mode = 2; //Standing still (will move if target is out of range) = 0, Front of target (Moves to front of target before attacking) = 1, Don't move at all (will not move even if target is out of range) = 
+//var mtype = 'osnake'; //Monster Type of the enemy you want to attack
+//var mtype2 = 'rat'; //Monster Type of the enemy you want to attack if you can't find the first
+
 let goldThreshold = 75000;
 let goldTransferAmount = 5000;
 
